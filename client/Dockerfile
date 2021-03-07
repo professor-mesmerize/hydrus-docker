@@ -8,8 +8,7 @@ ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
 LABEL git="https://github.com/hydrusnetwork/hydrus"
 
 RUN apk --no-cache add fvwm x11vnc xvfb supervisor py3-beautifulsoup4 py3-psutil py3-pysocks py3-requests py3-twisted py3-yaml qt5-qtcharts py3-lz4 ffmpeg  py3-pillow py3-numpy py3-numpy py3-qt5 \
- && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing font-noto font-noto-emoji \
- && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/community font-noto-cjk
+ && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/community font-noto font-noto-emoji font-noto-cjk
 RUN pip install qtpy Send2Trash html5lib twisted
 
 RUN set -xe \
