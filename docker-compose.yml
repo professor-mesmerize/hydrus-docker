@@ -1,0 +1,24 @@
+version: '2'
+services:
+  hydrusclient:
+    image: suika/hydrus:latest
+    container_name: hydrusclient
+    restart: unless-stopped
+    environment:
+      - UID=1000
+      - GID=1000
+    volumes:
+      - HOST_PATH_DB:/opt/hydrus/db
+    tmpfs:
+      - /tmp #optional for SPEEEEEEEEEEEEEEEEEEEEEEEEED and less disk access
+    ports:
+      - 5800:5800   #noVNC
+      - 5900:5900   #VNC
+      - 45868:45868 #Booru
+      - 45869:45869 #API
+  hydrus-web:
+    image: suika/hydrus-web:latest
+    container_name: hydrus-web
+    restart: always
+    ports:
+      - 8080:80 # READ
