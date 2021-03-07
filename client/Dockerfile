@@ -35,11 +35,11 @@ COPY --chown=hydrus ./novnc/icon.png /opt/noVNC/app/images/icons/icon.png
 VOLUME /opt/hydrus/db
 
 ENV QT_SCALE_FACTOR=1.1 \
-    VNC_PORT=5900 \
-    NOVNC_PORT=5800 \
-    SUPERVISOR_PORT=9001 \
+    VNC_PORT=6900 \
+    NOVNC_PORT=6800 \
+    SUPERVISOR_PORT=9002 \
     XVFBRES=1680x1050x24 \
     UID=${UID:-1000} \
     GID=${GID:-1000} \
     DB_DIR=/opt/hydrus/db
-EXPOSE 5800 5900
+EXPOSE 6800 6900
