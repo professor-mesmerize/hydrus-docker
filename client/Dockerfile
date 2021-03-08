@@ -29,6 +29,7 @@ RUN set -xe \
 
 COPY ./entrypoint.sh /entrypoint.sh
 COPY ./supervisord.conf /etc/supervisord.conf
+COPY ./passwordfile /passwordfile
 COPY --chown=hydrus ./novnc/index.html /opt/noVNC/index.html
 COPY --chown=hydrus ./novnc/icon.png /opt/noVNC/app/images/icons/icon.png
 
