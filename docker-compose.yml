@@ -9,8 +9,9 @@ services:
       - GID=1000
     env_file:
       - pw.env
-    volumes:
-      - /Users/seamusreynolds/Sync/hydrusdbs/workmac:/opt/hydrus/db
+#    volumes:
+#      Replace this with the volume mappings you want. An example is provided below.
+#      - /User/coolcat/hydrus:/opt/hydrus/db
     tmpfs:
       - /tmp #optional for SPEEEEEEEEEEEEEEEEEEEEEEEEED and less disk access
     ports:
